@@ -23,7 +23,8 @@ RUN use case for Karma Jasmine:
 
 Aside from the initial setup and configuration typical interaction with Karma will be to run "karma start" in a terminal window.
 
-
+//CSS library used
+Angular material has been used for CSS set up 
 
 //observations and challenges while working
 
