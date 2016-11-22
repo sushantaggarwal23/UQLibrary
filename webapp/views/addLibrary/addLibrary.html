@@ -1,0 +1,60 @@
+<div ng-if="status" id="status">
+    <b layout="row" layout-align="center center" class="md-padding md-warn">
+        {{statusMessage}}
+    </b>
+</div>
+<md-content layout-padding>
+    <md-toolbar class="md-theme-light"><h2 class="md-title" layout-padding >Add Library</h2></md-toolbar>
+    <form name="projectForm" ng-submit="submit();">
+        <div layout="row">
+            <md-input-container  flex="50">
+                <label>ID</label>
+                <input required type="number" step="any" name="id" ng-model="library.rate" />
+
+                <div ng-messages="projectForm.id.$error" multiple md-auto-hide="false">
+                    <div ng-message="required">
+                        this field is required
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container  flex="50">
+                <label>Library Name</label>
+                <input md-maxlength="50" required md-no-asterisk name="liraryName" ng-model="library.name">
+                <div ng-messages="projectForm.liraryName.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">Name must be less than 50 characters long.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-input-container flex="50">
+                <label>Short Name</label>
+                <input md-maxlength="5" required name="shortName" ng-model="library.shortName">
+                <div ng-messages="projectForm.shortName.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">Name must be less than 5 characters long.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container flex="50">
+                <label>Campus</label>
+                <md-select name="type" ng-model="library.campus" required>
+                    <md-option value="stLucia">St Lucia</md-option>
+                    <md-option value="herston">Herston</md-option>
+                    <md-option value="bundaberg">Bundaberg</md-option>
+                    <md-option value="pace">PACE</md-option>
+                    <md-option value="mater">Mater</md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+
+
+
+        <div>
+            <md-button type="submit" class="md-raised md-primary">Submit</md-button>
+            <md-button href="#/list" class="md-raised md-primary">Back</md-button>
+        </div>
+
+
+    </form>
+</md-content>

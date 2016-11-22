@@ -1,0 +1,33 @@
+<div layout="row"  layout-padding  layout-align="left center">
+
+    <md-content  class="md-block">
+        <md-list>
+            <md-toolbar class="md-theme-light"><h2 class="md-title" layout-padding >Library Detail</h2></md-toolbar>
+            <md-list-item class="md-3-line contact-item">
+                <div class="md-list-item-text" layout="column">
+                    <h3>{{ libObj.libName }}</h3>
+                    <h4>Available Computers: {{ availableTotal }}</h4>
+                    <h4>Occupied Computers: {{ occupiedTotal }}</h4>
+                </div>
+
+            </md-list-item>
+            <div>
+                <b layout="row" layout-align="left center" class="md-padding md-warn">
+                    Departments
+                </b>
+            </div>
+            <md-list-item class="md-3-line contact-item" ng-repeat="department in departments " >
+                <div  class="md-list-item-text" style="margin-top: 0;">
+                    <h4>{{department.name}}</h4>
+                    <p>Opening Hours : {{ department.times.hours[0].from }} - {{ department.times.hours[0].to }}</p>
+                </div>
+            </md-list-item>
+            </md-list>
+        </md-list>
+        <div>
+            <md-button href="#/list" class="md-raised md-primary">Back</md-button>
+        </div>
+    </md-content>
+
+
+</div>

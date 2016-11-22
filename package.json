@@ -1,0 +1,22 @@
+{
+  "name": "uq",
+  "version": "1.0.0",
+  "description": "sample app for UQ libraries",
+  "main": "app.js",
+  "scripts": {
+    "test": "testcase js file"
+  },
+  "author": "Sushant Aggarwal",
+  "license": "ISC",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "corsproxy": "^1.5.0",
+    "grunt": "^0.4.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2"
+  }
+}
