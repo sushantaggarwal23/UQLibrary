@@ -1,9 +1,7 @@
 /**
  * Created by Sushant Aggarwal on 19/11/2016.
  */
-/**
- * Created by Sushant Aggarwal on 28/10/2016.
- */
+
 
 // configure our routes
 angular.module('libraryApp').config(function($routeProvider) {
