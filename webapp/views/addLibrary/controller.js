@@ -10,9 +10,9 @@ angular.module('libraryApp').controller('addLibrary', function($scope) {
            alert('successfull')
         }
     });
-
+// checking submit for mocking success message
     $scope.submit = function() {
-        // validation
+        // validation check
         if ($scope.projectForm.$valid) {
             $scope.status=true;
             $scope.statusMessage = 'Record successfully added';
