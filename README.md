@@ -23,3 +23,14 @@ RUN use case for Karma Jasmine:
 
 Aside from the initial setup and configuration typical interaction with Karma will be to run "karma start" in a terminal window.
 
+
+
+//observations and challenges while working
+
+1. No key was available for matching the data between library_hours and computer_availability API. Only name was available for matching the records and names in both the APIs were not consistent. 
+Ideally, there should be a matching key instead of a name as it is more reliable.
+ Also, if in future there is a need to call API for a specific id , it can be easily done like computer_availability/id
+
+2. Availability in computer_availability API is an object, so had to first convert it into an Array and then iterate through it to get the total availability.
+
+3. Calling the APIs were giving CORS errors, so had to create a proxy server to successfully call the APIs.
