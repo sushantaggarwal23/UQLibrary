@@ -1,7 +1,7 @@
 /**
  * Created by Sushant Aggarwal on 21/11/2016.
  */
-
+// getter setter service for available computers
 angular.module('libraryApp').service('getComputerAvailabilityObject', function() {
     var libraryList = [];
 
