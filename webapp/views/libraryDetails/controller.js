@@ -1,6 +1,8 @@
 /**
  * Created by Sushant Aggarwal on 19/11/2016.
  */
+
+//library details controller 
 angular.module('libraryApp').controller('libraryDetails', function($scope,$routeParams,$filter,getLibraryListObject,getComputerAvailabilityObject) {
 
     $scope.id = $routeParams.id;
@@ -36,6 +38,8 @@ angular.module('libraryApp').controller('libraryDetails', function($scope,$route
             availability.push(availabilityJson[key]);
         }
         $scope.availableComputers = availability;
+        
+        //getting sum
         $scope.availableTotal = $scope.sum($scope.availableComputers, 'Available');
         $scope.occupiedTotal = $scope.sum($scope.availableComputers, 'Occupied');
     }
