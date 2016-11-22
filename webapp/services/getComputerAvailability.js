@@ -1,7 +1,7 @@
 /**
  * Created by Sushant Aggarwal on 20/11/2016.
  */
-
+//service to get available computers data
 angular.module('libraryApp').service('getComputerAvailability', function($http) {
     this.getData = function() {
     //used corsproxy to get data
